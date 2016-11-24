@@ -1,0 +1,17 @@
+commerce_payment.commerce_payment_gateway.plugin.offline:
+  type: commerce_payment_gateway_configuration
+  mapping:
+    description:
+      type: text
+      label: 'Description'
+      translatable: true
+    information:
+      type: text_format
+      label: 'Information'
+      translatable: true
+    checkout:
+      type: boolean
+      label: 'Avsailable on checkout'
+    terminal:
+      type: boolean
+      label: 'Available on terminal'
