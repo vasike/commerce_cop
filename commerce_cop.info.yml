@@ -1,0 +1,7 @@
+name: Commerce Custom Offline Payments
+type: module
+description: 'Manage custom offline payments.'
+package: Commerce Payments
+core: 8.x
+dependencies:
+  - commerce:commerce_payment
