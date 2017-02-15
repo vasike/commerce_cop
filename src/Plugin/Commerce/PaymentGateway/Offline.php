@@ -45,8 +45,6 @@ class Offline extends OnsitePaymentGatewayBase implements OfflineInterface {
         'value' => '',
         'format' => 'plain_text',
       ],
-      'checkout' => 1,
-      'terminal' => 1,
     ] + parent::defaultConfiguration();
   }
 
@@ -77,18 +75,6 @@ class Offline extends OnsitePaymentGatewayBase implements OfflineInterface {
       '#placeholder' => $this->t('Help text displayed to end user on checkout payment.'),
       '#default_value' => $this->configuration['description'],
     ];
-    $form['offline']['checkout'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Available on checkout'),
-      '#description' => $this->t('TRUE or FALSE indicating whether or not payments can be processed via this payment method through the checkout form.'),
-      '#default_value' => $this->configuration['checkout'],
-    ];
-    $form['offline']['terminal'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Available on terminal'),
-      '#description' => $this->t("TRUE or FALSE indicating whether or not payments can be processed via this payment method through the administrative payment terminal on an order's Payment tab"),
-      '#default_value' => $this->configuration['terminal'],
-    ];
 
     return $form;
   }
@@ -105,8 +91,6 @@ class Offline extends OnsitePaymentGatewayBase implements OfflineInterface {
       $values = $form_state->getValue($form_parents);
       $this->configuration['description'] = $values['description'];
       $this->configuration['information'] = $values['information'];
-      $this->configuration['checkout'] = $values['checkout'];
-      $this->configuration['terminal'] = $values['terminal'];
     }
   }
 

@@ -9,9 +9,3 @@ commerce_payment.commerce_payment_gateway.plugin.offline:
       type: text_format
       label: 'Information'
       translatable: true
-    checkout:
-      type: boolean
-      label: 'Avsailable on checkout'
-    terminal:
-      type: boolean
-      label: 'Available on terminal'
