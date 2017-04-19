@@ -1,3 +1,8 @@
+Please follow and help with Commerce 2.x core issue :
+https://www.drupal.org/node/2828525
+
+DO NOT USE THIS MODULE.
+
 README file for Commerce Custom Offline Payments
 
 CONTENTS OF THIS FILE
